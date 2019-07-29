@@ -1,9 +1,10 @@
 import express from 'express'
 import expressGraphQL from 'express-graphql';
 import mongoose from 'mongoose';
-import bodyParser from 'body-bodyParser';
+import bodyParser from 'body-parser';
 import cors from 'cors';
-import { ApolloServer } from 'apollo-server-express';
+
+import schema from "./graphql";
 
 require('dotenv').config({ path: './config/.env'})
 
