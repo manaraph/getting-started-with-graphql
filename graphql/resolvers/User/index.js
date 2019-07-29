@@ -1,5 +1,6 @@
 // The User Schema
 import User from '../../../models/Users';
+import { promisify } from 'util';
 
 export default {
   Query: {
@@ -16,8 +17,8 @@ export default {
           .populate()
           .exec((err, res) => {
             err ? reject(err) : resolve(res);
-          })
-      })
+          });
+      });
     }
   },
   Mutation: {
@@ -29,6 +30,10 @@ export default {
         });
       });
     },
-    
+    editUser: (root, { id, name, email }) => {
+      return new Promise((resolve, reject) => {
+        User.findOneAndUpdate()
+      })
+    }
   }
 }
