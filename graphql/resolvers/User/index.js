@@ -32,8 +32,19 @@ export default {
     },
     editUser: (root, { id, name, email }) => {
       return new Promise((resolve, reject) => {
-        User.findOneAndUpdate()
+        User.findOneAndUpdate({ id }, { $set: { name, email }}).exec(
+          (err, res) => {
+            err ? reject(err) : resolve(res);
+          }
+        );
+      });
+    },
+    deleteUser: (root, args) => {
+      return new Promise((resolve, reject) => {
+        User.findOneAndRemove(args).exec((err, res) => {
+          err ? reject(err) : resolve(res);
+        })
       })
     }
   }
-}
+};
