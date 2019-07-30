@@ -2,7 +2,7 @@
 import express from 'express'
 import { ApolloServer } from 'apollo-server-express';
 
-require('dotenv').config({ path: './config/.env'})
+require('dotenv').config({ path: '../config/.env' || '../config/.env.global' })
 const typeDefs = require('./api/schema');
 const resolvers = require('./api/resolvers');
 

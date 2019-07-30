@@ -6,14 +6,25 @@
 
 ## Setting up
 - cd getting-started-with-graphql.
+- To play around with graphql run npm install and then npm run trial
 - Navigate into config folder and rename env.global to .env
-- You can customize your environment variables.
+- Setup your environment variables:
+  - Set your host url default is http://localhost or http://127.0.0.1
+  - Set up your port default is 4000
+  - Add your MongoDB URI eg. "mongodb://<dbuser>:<dbpassword>@xxxxxxxx.mlab.com:57097/dbname"
+    - Sign up on [mlab](https://mlab.com/).
+    - Create a database.
+    - Create a user and password for your database (this correspond to your <dbuser> and <dbpassword> as seen in your MongoDB URI).
+    - Please note the URI set in the url './config/.env.global' won't work. (this just a guide on how the URI looks like).
 
 ## Installation and running app with npm
 ``` bash
 
 # install dependencies
 npm install 
+
+# Play with grapql app in at localhost:4000
+npm run trial
 
 # serve app in developer mode at localhost:4000
 npm run dev

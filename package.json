@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "trial": "nodemon --exec babel-node apollo-server",
     "dev": "nodemon --exec babel-node index.js",
     "start": "node index.js"
   },
