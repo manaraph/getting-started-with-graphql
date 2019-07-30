@@ -34,6 +34,48 @@ npm start
 
 ```
 
+## Running queries and mutations
+### Create User
+  ``` bash
+  mutation {
+    addUser(id: "1", name: "Omachonu Manasseh", email: "omachonu@masseh.com") {
+      id
+      name
+      email
+    }
+  }
+  ```
+### Delete User
+  ``` bash
+    mutation {
+      deleteUser(id: "1", name: "Dan Abramov", email: "dan@dan.com") {
+        id
+        name
+        email
+      }
+    }
+  ```
+### Get all Users
+  ``` bash
+    query {
+      users {
+        id
+        name
+        email
+      }
+    }
+  ```
+### Get specific User
+  ``` bash
+    query {
+      user(id: "1") {
+        id
+        name
+        email
+      }
+    }
+  ```
+
 ## Credits
 Adapted from:
 - [Creating a GraphQL server with NodeJS](https://medium.com/crowdbotics/creating-a-graphql-server-with-nodejs-ef9814a7e0e6) - Aman Mittal
