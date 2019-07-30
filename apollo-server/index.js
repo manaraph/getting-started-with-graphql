@@ -22,7 +22,7 @@ const server = new ApolloServer({
 });
 server.applyMiddleware({ app });
 
-app.get('/', (req, res) => res.send("Babel is working"))
+app.get('/', (req, res) => res.send(`Babel is working. Check graphql here: http://${host}:${port}${server.graphqlPath}`))
 
 
 app.listen({ port: 4000 }, () => {
