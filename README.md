@@ -1,5 +1,5 @@
 # getting-started-with-graphql
-> Simple GraphQl API with Node 🚀
+> GraphQl API with Node 🚀
 
 ## Cloning Repository
 > git clone https://github.com/manaraph/getting-started-with-graphql.git
@@ -13,7 +13,7 @@
   - Set up your port default is 4000
   - Add your MongoDB URI eg. "mongodb://<dbuser>:<dbpassword>@xxxxxxxx.mlab.com:57097/dbname"
     - Sign up on [mlab](https://mlab.com/).
-    - Create a database.
+    - Create a database, you use the free version for aws, google cloud or azure.
     - Create a user and password for your database (this correspond to your <dbuser> and <dbpassword> as seen in your MongoDB URI).
     - Please note the URI set in the url './config/.env.global' won't work. (this just a guide on how the URI looks like).
 

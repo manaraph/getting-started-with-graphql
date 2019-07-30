@@ -1,6 +1,5 @@
 // The User Schema
 import User from '../../../models/Users';
-import { promisify } from 'util';
 
 export default {
   Query: {
