@@ -48,7 +48,7 @@ npm start
 ### Delete User
   ``` bash
     mutation {
-      deleteUser(id: "1", name: "Dan Abramov", email: "dan@dan.com") {
+      deleteUser(id: "1", name: "Omachonu Manasseh", email: "omachonu@masseh.com") {
         id
         name
         email
